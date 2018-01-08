@@ -27,7 +27,7 @@ namespace SportsStore.Controllers
 
         public ViewResult Index(string resultsUrl)
         {
-            return View(new CartIndexViewModel { Cart = this.cart, Url = resultsUrl });
+            return View(new CartIndexViewModel { Cart = this.cart, returnUrl = resultsUrl });
         }
 
         public RedirectToActionResult AddToCart(int productId, string returnUrl)

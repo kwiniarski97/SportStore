@@ -1,7 +1,5 @@
-﻿@using System.IO
-@using Microsoft.AspNetCore.Mvc.Razor
-@model CartIndexViewModel
-<h2></h2>
+﻿@model CartIndexViewModel
+<h2>Your cart</h2>
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
@@ -26,7 +24,7 @@
                         <input type="hidden" name="ProductID"
                                value="@line.Product.ProductId" />
                         <input type="hidden" name="returnUrl"
-                               value="@Model.Url" />
+                               value="@Model.returnUrl" />
                         <button type="submit" class="btn btn-sm btn-danger">
                             Remove
                         </button>
@@ -45,5 +43,5 @@
     </tfoot>
 </table>
 <div class="text-center">
-    <a class="btn btn-primary" href="@Model.Url">Continue shopping</a>
+    <a class="btn btn-primary" href="@Model.returnUrl">Continue shopping</a>
 </div>

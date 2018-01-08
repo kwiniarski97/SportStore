@@ -2,14 +2,17 @@
 <a class="btn btn-block btn-secondary"
    asp-action="List"
    asp-controller="Product"
-   asp-route-category="">Home</a>
-
-@foreach (var category in Model)
+   asp-route-category="">
+    Home
+</a>
+@foreach (string category in Model)
 {
     <a class="btn btn-block
-       @(category== ViewBag.SelectedCategory ? "btn-primary" : "btn-secondary")"
+       @(category == ViewBag.SelectedCategory ? "btn-primary": "btn-secondary")"
        asp-action="List"
        asp-controller="Product"
        asp-route-category="@category"
-       asp-route-productPage="1">@category</a>
+       asp-route-productPage="1">
+        @category
+    </a>
 }

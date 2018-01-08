@@ -9,6 +9,6 @@ namespace SportsStore.Models.ViewModels
     {
         public Cart Cart { get; set; }
 
-        public string Url { get; set; }
+        public string returnUrl { get; set; }
     }
 }
